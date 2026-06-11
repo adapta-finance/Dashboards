@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --font-archivo: "Archivo";
+  --font-instrument: "Instrument Sans";
+  --font-plex-mono: "IBM Plex Mono";
+}
+
+body {
+  background: #0B1217;
+  color: #E8EFF2;
+}
+
+/* fita perfurada — assinatura do chassi, remete à fita diária do ledger */
+.fita {
+  background-image: radial-gradient(circle at 50% 50%, #1E2F3A 1.1px, transparent 1.3px);
+  background-size: 10px 14px;
+}
+
+::selection { background: #3DDC97; color: #0B1217; }
+
+*:focus-visible {
+  outline: 2px solid #3DDC97;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+.tabular { font-variant-numeric: tabular-nums; }
+
+.scroll-fino::-webkit-scrollbar { height: 8px; width: 8px; }
+.scroll-fino::-webkit-scrollbar-thumb { background: #1E2F3A; border-radius: 4px; }
+.scroll-fino::-webkit-scrollbar-track { background: transparent; }
